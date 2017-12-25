@@ -1,5 +1,5 @@
 {
-    "name": "kbim-dev/yii2-google-maps",
+    "name": "kbim/yii2-google-maps",
     "description": "Google Maps Yii2 wrapper",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","localization support"],
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "KBIM-dev\\GoogleMaps\\": ""
+            "kbim\\GoogleMaps\\": ""
         }
     }
 }
