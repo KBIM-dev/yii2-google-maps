@@ -2,7 +2,7 @@ Google Maps Yii2 wrapper
 ========================
 Google Maps Yii2 wrapper
 
-Forked from [https://github.com/tugmaks/yii2-google-maps] and
+Forked from [https://github.com/voime/yii2-google-maps] and
   * added Infowindow support.
   * removed units parameters.
   * added mapOptions parameters. (styles)
@@ -17,13 +17,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist voime/yii2-google-maps "*"
+php composer.phar require --prefer-dist KBIM-dev/yii2-google-maps "*"
 ```
 
 or add
 
 ```
-"voime/yii2-google-maps": "*"
+"KBIM-dev/yii2-google-maps": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -38,7 +38,7 @@ BASIC USAGE
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-use voime\GoogleMaps\Map;
+use KBIM-dev\GoogleMaps\Map;
 
 echo Map::widget([
     'zoom' => 16,
@@ -64,7 +64,7 @@ return [
 Or pass it direct to widget.
 
 ```php
-use voime\GoogleMaps\Map;
+use KBIM-dev\GoogleMaps\Map;
 
 echo Map::widget([
     'apiKey'=> 'VIza7yBgBzYEbKx09V566DhM8Ylc3NjWsJ0ps-2',
@@ -94,7 +94,7 @@ MARKERS
 One or more marker can be added to map. Just pass marker array to widget config
 
 ```php
-use voime\GoogleMaps\Map;
+use KBIM-dev\GoogleMaps\Map;
 
 echo Map::widget([
     'mapOptions' => ['styles' => file_get_contents(Yii::getAlias('@webroot/res/map-styles.json'))],
@@ -125,7 +125,7 @@ MARKERS FIT BOUNDS
 Sometimes you need to show all markers on map, but do not know initial map center and zoom. In this case use widget like this
 
 ```php
-use voime\GoogleMaps\Map;
+use KBIM-dev\GoogleMaps\Map;
 
 echo Map::widget([
     'width' => '50%',
@@ -153,7 +153,7 @@ MapInput widget example. This need the following inputs
 
 
 ```php
-use voime\GoogleMaps\MapInput;
+use KBIM-dev\GoogleMaps\MapInput;
 
 <?= $form->field($model, 'address')->textInput(['id'=>'address-input']) ?>
 
