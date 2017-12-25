@@ -34,7 +34,7 @@ BASIC USAGE
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-use KBIM-dev\GoogleMaps\Map;
+use kbim\GoogleMaps\Map;
 
 echo Map::widget([
     'zoom' => 16,
@@ -42,6 +42,8 @@ echo Map::widget([
     'width' => '700px',
     'height' => '400px',
     'mapType' => Map::MAP_TYPE_SATELLITE,
+    'language' => 'en',
+    'region' => 'GB',
 ]);
 ```
 
@@ -60,7 +62,7 @@ return [
 Or pass it direct to widget.
 
 ```php
-use KBIM-dev\GoogleMaps\Map;
+use kbim\GoogleMaps\Map;
 
 echo Map::widget([
     'apiKey'=> 'VIza7yBgBzYEbKx09V566DhM8Ylc3NjWsJ0ps-2',
@@ -90,7 +92,7 @@ MARKERS
 One or more marker can be added to map. Just pass marker array to widget config
 
 ```php
-use KBIM-dev\GoogleMaps\Map;
+use kbim\GoogleMaps\Map;
 
 echo Map::widget([
     'mapOptions' => ['styles' => file_get_contents(Yii::getAlias('@webroot/res/map-styles.json'))],
@@ -121,7 +123,7 @@ MARKERS FIT BOUNDS
 Sometimes you need to show all markers on map, but do not know initial map center and zoom. In this case use widget like this
 
 ```php
-use KBIM-dev\GoogleMaps\Map;
+use kbim\GoogleMaps\Map;
 
 echo Map::widget([
     'width' => '50%',
@@ -149,7 +151,7 @@ MapInput widget example. This need the following inputs
 
 
 ```php
-use KBIM-dev\GoogleMaps\MapInput;
+use kbim\GoogleMaps\MapInput;
 
 <?= $form->field($model, 'address')->textInput(['id'=>'address-input']) ?>
 
