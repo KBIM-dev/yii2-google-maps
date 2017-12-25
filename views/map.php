@@ -81,7 +81,7 @@
     function loadScript() {
         var script = document.createElement("script");
         script.type = "text/javascript";
-        script.src = "https://maps.googleapis.com/maps/api/js?key=<?= $this->context->apiKey ?>&sensor=<?= $this->context->sensor ?>&callback=initialize";
+        script.src = "https://maps.googleapis.com/maps/api/js?key=<?= $this->context->apiKey ?>&sensor=<?= $this->context->sensor ?>&callback=initialize&language=<?= $this->context->language ?><?= $this->context->region !== false ? ('&region='.$this->context->region) : '' ?  ?>";
         document.body.appendChild(script);
     }
     window.onload = loadScript;
