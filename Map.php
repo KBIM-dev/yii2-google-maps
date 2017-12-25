@@ -1,6 +1,6 @@
 <?php
 
-namespace voime\GoogleMaps;
+namespace kbim\GoogleMaps;
 
 use Yii;
 
