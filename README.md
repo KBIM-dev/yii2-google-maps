@@ -3,11 +3,7 @@ Google Maps Yii2 wrapper
 Google Maps Yii2 wrapper
 
 Forked from [https://github.com/voime/yii2-google-maps] and
-  * added Infowindow support.
-  * removed units parameters.
-  * added mapOptions parameters. (styles)
-  * added marker options. (icon)
-  * added mapInput widget
+  * added Localization support.
 
 Installation
 ------------
