@@ -1,13 +1,13 @@
 {
-    "name": "voime/yii2-google-maps",
+    "name": "KBIM-dev/yii2-google-maps",
     "description": "Google Maps Yii2 wrapper",
     "type": "yii2-extension",
-    "keywords": ["yii2","extension"],
+    "keywords": ["yii2","extension","localization support"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Arvi Võime",
-            "email": "avoime@gmail.com"
+            "name": "KBIM-dev",
+            "email": "info@kbim.com.ua"
         }
     ],
     "require": {
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "voime\\GoogleMaps\\": ""
+            "KBIM-dev\\GoogleMaps\\": ""
         }
     }
 }
