@@ -184,17 +184,19 @@
           }, function (results, status) {
               if (status == google.maps.GeocoderStatus.OK) {
                   // get gountry from places object
+	              <?php if (!empty($this->context->addressTypeInput)):?>
+                  var index = results[0].types.indexOf('street_address');
+	              if (index > -1) {
+		              document.getElementById('<?= $this->context->addressTypeInput?>').value = results[0].types[index];
+	              }
+	              <?php endif; ?>
                   for(var i = 0; i < results[0].address_components.length; i += 1) {
                     var addressObj = results[0].address_components[i];
-                    for(var j = 0; j < addressObj.types.length; j += 1) {
                       <?php if (!empty($this->context->countryInput)):?>
-                      if (addressObj.types[j] === 'country') {
-                        //console.log(addressObj.types[j]); // confirm that this is 'country'
-                        //console.log(addressObj.long_name); // confirm that this is the country name
-                        document.getElementById('<?= $this->context->countryInput?>').value = addressObj.long_name;
+                      if (addressObj.types.indexOf('country') > -1) {
+                          document.getElementById('<?= $this->context->countryInput?>').value = addressObj.long_name;
                       }
                       <?php endif; ?>
-                    }
                   }
                   document.getElementById('<?= $this->context->addressInput?>').value = results[0].formatted_address;
               }
