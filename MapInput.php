@@ -25,6 +25,7 @@ class MapInput extends \yii\base\Widget {
 
     public $countryInput = null;
     public $addressInput = 'address-input';
+    public $addressTypeInput = 'address-type-input';
     public $latInput = 'lat-input';
     public $lngInput = 'lng-input';
 
