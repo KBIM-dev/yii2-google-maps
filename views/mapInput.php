@@ -94,8 +94,8 @@
         var _handler = function(event) {
 	        window.circle.setRadius(event.target.value * <?= $this->context->circleOptions['kilometers'] ? 1000 : 1 ?>);
         };
-		radiusInput.addEventListener('change', _handler, false);
-		radiusInput.addEventListener('wheel', _handler, false);
+		radiusInput.addEventListener('change', _handler);
+		radiusInput.addEventListener('wheel', _handler);
     <?php endif; ?>
 
 	// insert marker if no markers on map
