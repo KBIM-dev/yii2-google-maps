@@ -34,11 +34,7 @@ BASIC USAGE
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<<<<<<< HEAD
 use KBIM-dev\GoogleMaps\Map;
-=======
-use kbim\GoogleMaps\Map;
->>>>>>> 09e8fdcdc0892dde9d676799a8068a4c9c6c581e
 
 echo Map::widget([
     'zoom' => 16,
@@ -46,11 +42,6 @@ echo Map::widget([
     'width' => '700px',
     'height' => '400px',
     'mapType' => Map::MAP_TYPE_SATELLITE,
-<<<<<<< HEAD
-=======
-    'language' => 'en',
-    'region' => 'GB',
->>>>>>> 09e8fdcdc0892dde9d676799a8068a4c9c6c581e
 ]);
 ```
 
@@ -69,11 +60,7 @@ return [
 Or pass it direct to widget.
 
 ```php
-<<<<<<< HEAD
 use KBIM-dev\GoogleMaps\Map;
-=======
-use kbim\GoogleMaps\Map;
->>>>>>> 09e8fdcdc0892dde9d676799a8068a4c9c6c581e
 
 echo Map::widget([
     'apiKey'=> 'VIza7yBgBzYEbKx09V566DhM8Ylc3NjWsJ0ps-2',
@@ -103,11 +90,7 @@ MARKERS
 One or more marker can be added to map. Just pass marker array to widget config
 
 ```php
-<<<<<<< HEAD
 use KBIM-dev\GoogleMaps\Map;
-=======
-use kbim\GoogleMaps\Map;
->>>>>>> 09e8fdcdc0892dde9d676799a8068a4c9c6c581e
 
 echo Map::widget([
     'mapOptions' => ['styles' => file_get_contents(Yii::getAlias('@webroot/res/map-styles.json'))],
@@ -138,11 +121,7 @@ MARKERS FIT BOUNDS
 Sometimes you need to show all markers on map, but do not know initial map center and zoom. In this case use widget like this
 
 ```php
-<<<<<<< HEAD
 use KBIM-dev\GoogleMaps\Map;
-=======
-use kbim\GoogleMaps\Map;
->>>>>>> 09e8fdcdc0892dde9d676799a8068a4c9c6c581e
 
 echo Map::widget([
     'width' => '50%',
@@ -170,11 +149,7 @@ MapInput widget example. This need the following inputs
 
 
 ```php
-<<<<<<< HEAD
 use KBIM-dev\GoogleMaps\MapInput;
-=======
-use kbim\GoogleMaps\MapInput;
->>>>>>> 09e8fdcdc0892dde9d676799a8068a4c9c6c581e
 
 <?= $form->field($model, 'address')->textInput(['id'=>'address-input']) ?>
 
