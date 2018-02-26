@@ -19,11 +19,8 @@ class Map extends \yii\base\Widget {
     public $zoom = 12;
     public $mapType = 'ROADMAP';
     public $markers = [];
-    public $mapOptions = [];
-<<<<<<< HEAD
+    public $mapOptions = []
     public $circles = [];
-=======
->>>>>>> 09e8fdcdc0892dde9d676799a8068a4c9c6c581e
     public $apiKey = null;
     public $markerFitBounds = false;
     public $language = 'en';    
