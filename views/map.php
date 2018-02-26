@@ -33,8 +33,7 @@
         });
         <?php endif; ?>
 
-<<<<<<< HEAD
-        <?php if (!empty($this->context->circles) && is_array($this->context->circles)): ?>
+<?php if (!empty($this->context->circles) && is_array($this->context->circles)): ?>
             <?php foreach ($this->context->circles as $key => $circle): ?>
                 var circle_<?= $key ?> = new google.maps.Circle({
                     strokeColor: '<?= array_key_exists('style', $circle) && array_key_exists('strokeColor', $circle['style']) ? $circle['style']['strokeColor'] : '#0000FF' ?>',
@@ -48,9 +47,6 @@
                 });
             <?php endforeach; ?>
         <?php endif; ?>
-
-=======
->>>>>>> 09e8fdcdc0892dde9d676799a8068a4c9c6c581e
         <?php if (!empty($this->context->markers) && is_array($this->context->markers)): ?>
         <?php foreach ($this->context->markers as $key => $marker): ?>
         var marker_<?= $key ?> = new google.maps.Marker({
