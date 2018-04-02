@@ -7,18 +7,20 @@
 	var map;
 	function initialize() {
 		var geocoder = new google.maps.Geocoder();
-		window.map = new google.maps.Map(document.getElementById("<?= $this->context->mapCanvas?>"),
-			{
-      <?php if (!empty($this->context->mapOptions) && is_array($this->context->mapOptions)): ?>
-      <?php foreach ($this->context->mapOptions as $mapOptionKey => $mapOption): ?>
-      <?=$mapOptionKey?>: <?=$mapOption?>,
-      <?php endforeach; ?>
-      <?php endif; ?>
-		zoom: <?= $this->context->zoom ?>,
-		mapTypeId: google.maps.MapTypeId.<?= $this->context->mapType ?>,
-			center: new google.maps.LatLng(0, 0)
-	}
-	);
+		if (!window.map) {
+            window.map = new google.maps.Map(document.getElementById("<?= $this->context->mapCanvas?>"),
+                {
+                    <?php if (!empty($this->context->mapOptions) && is_array($this->context->mapOptions)): ?>
+                        <?php foreach ($this->context->mapOptions as $mapOptionKey => $mapOption): ?>
+                            <?=$mapOptionKey?>: <?=$mapOption?>,
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                    zoom: <?= $this->context->zoom ?>,
+                    mapTypeId: google.maps.MapTypeId.<?= $this->context->mapType ?>,
+                    center: new google.maps.LatLng(0, 0)
+                }
+            );
+        }
 
 		var latInput = document.getElementById('<?= $this->context->latInput?>').value;
 		var lngInput = document.getElementById('<?= $this->context->lngInput?>').value;
