@@ -34,6 +34,7 @@ namespace kbim\GoogleMaps;
 		public $countryInput = null;
 		public $addressInput = 'address-input';
 		public $addressTypeInput = 'address-type-input';
+    		public $addressElementsInput = null;
 		public $latInput = 'lat-input';
 		public $lngInput = 'lng-input';
 		public $radiusInput = 'radius-input';
