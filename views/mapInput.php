@@ -209,6 +209,30 @@
 		}, function (results, status) {
 			if (status == google.maps.GeocoderStatus.OK) {
 				// get gountry from places object
+				<?php if ($this->context->addressElementsInput): ?>
+                    let addressElements = {};
+                    if (results[0]['address_components']) {
+                        results[0]['address_components'].map(el => {
+                            const types = [...el.types];
+                            let element = {};
+                            if (types.includes('street_number')) {
+                                element = { streetNumber: el['long_name'] };
+                            } else if (types.includes('street_address') || types.includes('route')) {
+                                element = { street: el['long_name'] };
+                            } else if (types.includes('locality') && types.includes('political')) {
+                                element = { city: el['long_name'] };
+                            } else if (types.includes('administrative_area_level_1') && types.includes('political')) {
+                                element = { district: el['long_name'] };
+                            } else if (types.includes('country') && types.includes('political')) {
+                                element = { country: el['long_name'] };
+                            } else if (types.includes('postal_code')) {
+                                element = { postalCode: el['long_name'] };
+                            }
+                            addressElements = { ...addressElements, ...element };
+                        });
+                    }
+                    document.getElementById('<?= $this->context->addressElementsInput?>').value = JSON.stringify(addressElements);
+				<?php endif; ?>
           <?php if (!empty($this->context->addressTypeInput)):?>
 				var index = results[0].types.indexOf('street_address');
 				if (index > -1) {
